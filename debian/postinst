@@ -31,7 +31,7 @@ case "$1" in
 		
 		# Las asignamos por etiqueta. Si tuviera más se aplicarían todas
 		ETIQUETAS=$(migasfree-tags -g)
-		if (echo $ETIQUETAS | grep \"SEC-MIGUELSERVET\" &> /dev/null) ; then
+		if (echo $ETIQUETAS | grep SEC-MIGUELSERVET &> /dev/null) ; then
 			cp ${SCREENCASTIFY} ${DIREXTENSIONS}
 		fi
 

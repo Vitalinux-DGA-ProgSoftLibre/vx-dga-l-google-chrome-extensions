@@ -1,7 +1,8 @@
-vx-dga-l-google-chrome-extensions (1.0-1) unstable; urgency=low
+vx-dga-l-google-chrome-extensions (1.0-2) unstable; urgency=low
 
   * Extensiones para google-chrome por centro/etiqueta
   * Centro inicial: Ies Miguel Servet
+  * Afecta a cualquier equipo con alguna etiqueta de MIGUELSERVET
 
  -- Ignacio Sancho <sannacho@gmail.com>  Tue, 22 Jan 2016 07:45:06 +0200
 
