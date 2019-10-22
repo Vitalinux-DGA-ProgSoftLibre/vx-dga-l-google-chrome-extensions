@@ -20,23 +20,134 @@ set -e
 
 case "$1" in
     configure)
-		if ! test -d /opt/google/chrome/extensions ;  then
-			mkdir -p /opt/google/chrome/extensions
-			chmod +rx /opt/google/chrome/extensions
-    	fi
-    	DIREXTENSIONS="/opt/google/chrome/extensions/"
-
-    	# Declaramos las extensiones disponibles en el paquete
-    	SCREENCASTIFY="/usr/share/vitalinux/google-chrome-extensions/mmeijimgabbpbgpdklnllpncmdofkcpn.json"
 		
+		DIREXTENSIONS="/opt/google/chrome/extensions"
+		if ! test -d "$DIREXTENSIONS" ;  then
+			mkdir -p "$DIREXTENSIONS"
+			chmod +rx "$DIREXTENSIONS"
+    	fi
+    	
+    	# Declaramos las extensiones disponibles en el paquete
+    	DIRBASE="/usr/share/vitalinux/google-chrome-extensions"
+    	SCREENCASTIFY="mmeijimgabbpbgpdklnllpncmdofkcpn.json"
+    	OFFICEONLINE="ndjpnladcallmjemlbaebfadecfhkepb.json"
+    	COPIARPEGAROFFICEONLINE="ifbmcpbgkhlpfcodhjhdbllhiaomkdej.json"
+    	ADDBLOCKPLUS="cfhdojbkjhnklbpkdaibdccddilifddb.json"
+    	VIDEODOWNLOADHELPER="lmjnegcaeklhafolokijcfjliaokphfk.json"
+    	S2BOT4SCRATCH="pllkalmkifgmanfoghenhgafbcpbicdj.json"
+    	ZERONOISECLASSRROOM="pgpkohbgbjmihckldcacljomfkkaogjd.json"
+		UBLOCK="cjpalhdlnbpafiamejdnhcphjbkeiagm.json"
+		BITBLOQ="ddpdpmibfdhifigignfdiggfbcmfblfj.json"
+
 		# Las asignamos por etiqueta. Si tuviera más se aplicarían todas
-		ETIQUETAS=$(migasfree-tags -g)
-		if (echo $ETIQUETAS | grep SEC-MIGUELSERVET &> /dev/null) ; then
-			cp ${SCREENCASTIFY} ${DIREXTENSIONS}
+		if [ -f /tmp/migasfree.tags ]; then
+ 			ETIQUETAS=$(cat /tmp/migasfree.tags)
+		else
+  			ETIQUETAS="$(migasfree-tags -g)"
+		fi
+		if (echo "$ETIQUETAS" | grep SEC-LUISBUNUEL.AULAINF > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${S2BOT4SCRATCH} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp "${DIRBASE}/${EXTENSION}" ${DIREXTENSIONS}
+				fi
+			done
+		fi
+		if (echo "$ETIQUETAS" | grep SEC-VALDERROBRES > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${UBLOCK} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp "${DIRBASE}/${EXTENSION}" ${DIREXTENSIONS}
+				fi
+			done
+		fi
+		if (echo "$ETIQUETAS" | grep SEC-MIGUELSERVET > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${SCREENCASTIFY} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp "${DIRBASE}/${EXTENSION}" ${DIREXTENSIONS}
+				fi
+			done
+		fi
+		if (echo "$ETIQUETAS" | grep MIGUELSERVET.PCSAULA > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${ZERONOISECLASSRROOM} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp "${DIRBASE}/${EXTENSION}" ${DIREXTENSIONS}
+				fi
+			done
+		fi
+		if (echo "$ETIQUETAS" | grep PER-AULARAGON > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${SCREENCASTIFY} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp "${DIRBASE}/${EXTENSION}" ${DIREXTENSIONS}
+				fi
+			done
+		fi
+		if (echo "$ETIQUETAS" | grep SEC-CORONADEARAGON > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${OFFICEONLINE} ${COPIARPEGAROFFICEONLINE} ${ADDBLOCKPLUS} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp ${DIRBASE}/${EXTENSION} ${DIREXTENSIONS}
+				fi
+			done
+		fi
+		if (echo "$ETIQUETAS" | grep SEC-SANALBERTO > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${VIDEODOWNLOADHELPER} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp ${DIRBASE}/${EXTENSION} ${DIREXTENSIONS}
+				fi
+			done
+		fi
+		if (echo "$ETIQUETAS" | grep CEN-CAREI > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${VIDEODOWNLOADHELPER} ${OFFICEONLINE} ${COPIARPEGAROFFICEONLINE} \
+				${ADDBLOCKPLUS} ${SCREENCASTIFY} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp ${DIRBASE}/${EXTENSION} ${DIREXTENSIONS}
+				fi
+			done
+		fi
+		if (echo "$ETIQUETAS" | grep CPA-RIBAGORZA > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${VIDEODOWNLOADHELPER} ${ADDBLOCKPLUS} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp ${DIRBASE}/${EXTENSION} ${DIREXTENSIONS}
+				fi
+			done
+		fi
+
+		if (echo "$ETIQUETAS" | grep SEC-CONDEARANDA > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${BITBLOQ} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp ${DIRBASE}/${EXTENSION} ${DIREXTENSIONS}
+				fi
+			done
+		fi
+		if (echo "$ETIQUETAS" | grep SEC-MIGUELDEMOLINOS > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${BITBLOQ} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp ${DIRBASE}/${EXTENSION} ${DIREXTENSIONS}
+				fi
+			done
+		fi
+		if (echo "$ETIQUETAS" | grep -E 'SEC-GOYA.AULAS|GOYA.AULASINF|GOYA.SALASPROF' > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${BITBLOQ} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp ${DIRBASE}/${EXTENSION} ${DIREXTENSIONS}
+				fi
+			done
+		fi
+		if (echo "$ETIQUETAS" | grep SEC-LUCASMALLADA > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${VIDEODOWNLOADHELPER} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp ${DIRBASE}/${EXTENSION} ${DIREXTENSIONS}
+				fi
+			done
+		fi
+		if (echo "$ETIQUETAS" | grep AYTO.BIESCAS > /dev/null 2> /dev/null) ; then
+			for EXTENSION in ${S2BOT4SCRATCH} ; do
+				if ! test -f ${DIREXTENSIONS}/${EXTENSION} ; then
+					cp ${DIRBASE}/${EXTENSION} ${DIREXTENSIONS}
+				fi
+			done
 		fi
 
 		# Las extensiones deben tener permiso de lectura para todos
-		chmod +r ${DIREXTENSIONS}/*
+		chmod -R +r ${DIREXTENSIONS}
 		;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

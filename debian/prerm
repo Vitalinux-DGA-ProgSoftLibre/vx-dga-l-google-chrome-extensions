@@ -19,6 +19,11 @@ set -e
 
 case "$1" in
     remove|upgrade|deconfigure)
+		# Borramos las extensiones que se hayan podido imponer por éste paquete a nivel de sistema
+		DIREXTENSIONS="/opt/google/chrome/extensions"
+		for EXTEN in /usr/share/vitalinux/google-chrome-extensions/*.json; do
+			[ -f "$DIREXTENSIONS/$(basename $EXTEN)" ] && rm -f "$DIREXTENSIONS/$(basename $EXTEN)"
+		done
     ;;
 
     failed-upgrade)

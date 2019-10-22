@@ -3,12 +3,11 @@ Section: utils
 Priority: extra
 Maintainer: Ignacio Sancho <sannacho@gmail.com>
 Build-Depends: debhelper (>= 8.0.0)
-Standards-Version: 3.9.3
+Standards-Version: 4.1.4
 Homepage: http://migasfree.org
 
 Package: vx-dga-l-google-chrome-extensions
 Architecture: all
-Pre-Depends: synapse, compton, vx-dga-l-compton
 Depends: ${misc:Depends}, google-chrome-stable, migasfree-client
 Description: Instala extensiones google-chrome
  Instala extensiones requeridas por los centros en google-chrome

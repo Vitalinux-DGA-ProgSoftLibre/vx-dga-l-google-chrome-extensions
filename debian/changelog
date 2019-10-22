@@ -1,9 +1,76 @@
-vx-dga-l-google-chrome-extensions (1.0-2) unstable; urgency=low
+vx-dga-l-google-chrome-extensions (1.0-17) unstable; urgency=low
+
+  * Extension Wedo para Biescas
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Fri, 8 Mar 2019 6:55:06 +0200
+
+vx-dga-l-google-chrome-extensions (1.0-16) unstable; urgency=low
+
+  * Extensión Bitbloq añadida al IES Goya
+  * Cuando el paquete se actualiza o borra se elimnan las extensiones/apps impuestas por el mismo
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Fri, 8 Mar 2019 6:55:06 +0200
+
+vx-dga-l-google-chrome-extensions (1.0-15) unstable; urgency=low
+
+  * Extensión Bitbloq añadida al IES Miguel de Molinos
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Fri, 8 Mar 2019 6:55:06 +0200
+vx-dga-l-google-chrome-extensions (1.0-14) unstable; urgency=low
+
+  * Extensión Bitbloq añadida para usar la aplicación para placas zum. Se debe activar la compilación online en la cuenta
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Fri, 8 Mar 2019 6:55:06 +0200
+
+vx-dga-l-google-chrome-extensions (1.0-13) unstable; urgency=low
+
+  * Se han añadido la extensión uBlock Origin
+  * Solicitado por el IES Matarraña de Valderrobres
+
+ -- Arturo Martín <amartinromero@gmail.com>  Thu, 7 Feb 2019 6:55:06 +0200
+
+vx-dga-l-google-chrome-extensions (1.0-12) unstable; urgency=low
+
+  * Se han añadido las extension videodownloadhelper en el IES Lucas Mallada
+
+ -- Arturo Martín <amartinromero@gmail.com>  Mon, 21 Jan 2019 6:55:06 +0200
+
+vx-dga-l-google-chrome-extensions (1.0-11) unstable; urgency=low
+
+  * Bug get tags
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Tue, 4 Dec 2018 6:55:06 +0200
+
+vx-dga-l-google-chrome-extensions (1.0-10) unstable; urgency=low
+
+  * Se añade aplicación Zero Noise ClassRoom.
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Tue, 15 May 2018 6:55:06 +0200
+
+vx-dga-l-google-chrome-extensions (1.0-9) unstable; urgency=low
+
+  * Se añade aplicación para uso de Scratch y Lego WeDo en AULAINF Luis Bunuel
+
+ -- Ignacio Sancho <sannacho@gmail.com>  Tue, 15 May 2018 6:55:06 +0200
+
+vx-dga-l-google-chrome-extensions (1.0-8) unstable; urgency=low
+
+  * Se han añadido las extesiones para el CIFEMA
+
+ -- Arturo Martín <amartinromero@gmail.com>  Mon, 1 May 2017 6:55:06 +0200
+
+vx-dga-l-google-chrome-extensions (1.0-7) unstable; urgency=low
+
+  * Se han añadido las demandas de la CPEPA Ribagorza
+
+ -- Arturo Martín <amartinromero@gmail.com>  Mon, 3 Apr 2017 6:55:06 +0200
+
+vx-dga-l-google-chrome-extensions (1.0-6) unstable; urgency=low
 
   * Extensiones para google-chrome por centro/etiqueta
   * Centro inicial: Ies Miguel Servet
   * Afecta a cualquier equipo con alguna etiqueta de MIGUELSERVET
+  * Extensiones para CURSO AULARAGON
+  * Extensiones de AddBlock, Office Online, Copiar y Pegar de Office Online, DownladHelper
 
- -- Ignacio Sancho <sannacho@gmail.com>  Tue, 22 Jan 2016 07:45:06 +0200
-
-
+ -- Ignacio Sancho <sannacho@gmail.com>  Mon, 20 Mar 2017 07:45:06 +0200
